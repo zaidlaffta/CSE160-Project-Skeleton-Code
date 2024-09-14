@@ -20,7 +20,7 @@ implementation {
   } flood_msg_t;
   
   enum {
-    printf("This is emum is pring ZZZZZZZZZZZZZZZZZZZZ")
+   printf("This is emum is pring ZZZZZZZZZZZZZZZZZZZZ")
     AM_FLOODMSG = 6,
     TIMER_PERIOD_MILLI = 5000,
   };
@@ -53,7 +53,7 @@ implementation {
   
     return msg;
   }
-  printf("AAAAAAAAAAAAAAAAAAAAAAA TEST AAAAAAAAAAAAAA")
+  //printf("AAAAAAAAAAAAAAAAAAAAAAA TEST AAAAAAAAAAAAAA")
   event void AMSend.sendDone(message_t *msg, error_t error) {
     if (error == SUCCESS) {
       // Blink LED when a message is sent
