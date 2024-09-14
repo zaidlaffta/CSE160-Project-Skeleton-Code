@@ -44,6 +44,8 @@ implementation {
 
     // Forward the message
     flood_msg_t *fwdMsg = (flood_msg_t *) call Packet.getPayload(&packet, sizeof(flood_msg_t));
+    //Test statement
+    printf("We are forwarding messages right now")
     fwdMsg->counter = counter;
     call AMSend.send(AM_BROADCAST_ADDR, &packet, sizeof(flood_msg_t));
 
