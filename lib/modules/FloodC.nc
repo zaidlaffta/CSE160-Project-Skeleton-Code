@@ -20,6 +20,7 @@ implementation {
   } flood_msg_t;
   
   enum {
+    printf("This is emum is pring ZZZZZZZZZZZZZZZZZZZZ")
     AM_FLOODMSG = 6,
     TIMER_PERIOD_MILLI = 5000,
   };
@@ -45,14 +46,14 @@ implementation {
     // Forward the message
     flood_msg_t *fwdMsg = (flood_msg_t *) call Packet.getPayload(&packet, sizeof(flood_msg_t));
     //Test statement
-    printf("We are forwarding messages right now")
+    printf("We are forwarding messages right now // 48")
     fwdMsg->counter = counter;
     call AMSend.send(AM_BROADCAST_ADDR, &packet, sizeof(flood_msg_t));
 
   
     return msg;
   }
-
+  printf("AAAAAAAAAAAAAAAAAAAAAAA TEST AAAAAAAAAAAAAA")
   event void AMSend.sendDone(message_t *msg, error_t error) {
     if (error == SUCCESS) {
       // Blink LED when a message is sent
